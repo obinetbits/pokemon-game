@@ -13,9 +13,9 @@ class Pokecard extends Component {
 	render() {
         const imgSrc = `${POKE_API}${padToThree(this.props.imageId)}.png`;
         const stayOpen = this.props.isCurrentName && this.props.isPrevName;
-		const flipCard = (this.props.flipCardAction || stayOpen || this.props.isMatched) ? 'flip-card-action': '';
+		const flipCard = (this.props.flipCardAction || stayOpen || this.props.isMatched) ? ' flip-card-action': '';
 		return (
-			<div className="flip-card" className={flipCard} onClick={this.handleFlipCard}>
+			<div className={`flip-card${flipCard}`} onClick={this.handleFlipCard}>
 				<div className="flip-card-inner">
 					<div className="Pokecard-front" >
 						<h1 className="Pokecard-title">Guess</h1>
