@@ -1,7 +1,6 @@
 .flip-card {
 	background-color: transparent;
 	perspective: 1000px; /* Remove this if you don't want the 3D effect */
-	cursor: pointer;
 }
 /* This container is needed to position the front and back side */
 .flip-card-inner {
@@ -18,7 +17,7 @@
 
 .Pokecard-front,
 .Pokecard-back {
-    width: 200px;
+	width: 200px;
 	padding: 10px;
 	margin: 1rem;
 	box-shadow: 7px 10px 12px -5px rgba(0, 0, 0, 0.56);
@@ -40,6 +39,7 @@
 
 .Pokecard-front {
 	position: absolute;
+	cursor: pointer;
 }
 
 .Pokecard-back {

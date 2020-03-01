@@ -11,6 +11,7 @@ class Pokecard extends Component {
 		if (this.props.flipCardAction) return;
 		this.props.flipCard({ uniqueId: this.props.uniqueId, name: this.props.name });
 	};
+
 	render() {
 		const imgSrc = `${POKE_API}${padToThree(this.props.imageId)}.png`;
 		const stayOpen = this.props.isCurrentName && this.props.isPrevName;
@@ -23,16 +24,37 @@ class Pokecard extends Component {
 						<div className="Pokecard-image">
 							<h1>Pokemon Card</h1>
 						</div>
-						<div className="Pokecard-data">👾👾👾</div>
-						<div className="Pokecard-data">♦️♦️️♦️♦️</div>
+						<div className="Pokecard-data">
+							<span role="img" aria-label="Monser">
+								👾👾👾
+							</span>
+						</div>
+						<div className="Pokecard-data">
+							<span role="img" aria-label="Diamonds">
+								♦️♦️️♦️♦️
+							</span>
+						</div>
 					</div>
 					<div className="Pokecard-back">
-						<h1 className="Pokecard-title">{this.props.name}</h1>
-						<div className="Pokecard-image">
-							<img src={imgSrc} alt={this.props.name} />
-						</div>
-						<div className="Pokecard-data">Exp: {this.props.exp} </div>
-						<div className="Pokecard-data">Type: {this.props.type} </div>
+						{flipCard ? (
+							<React.Fragment>
+								<h1 className="Pokecard-title">{this.props.name}</h1>
+								<div className="Pokecard-image">
+									<img src={imgSrc} alt={this.props.name} />
+								</div>
+								<div className="Pokecard-data">Exp: {this.props.exp} </div>
+								<div className="Pokecard-data">Type: {this.props.type} </div>
+							</React.Fragment>
+						) : (
+							<React.Fragment>
+								<h1 className="Pokecard-title">Dummy</h1>
+								<div className="Pokecard-image">
+									<img src={imgSrc} alt="Demo" />
+								</div>
+								<div className="Pokecard-data">Dummy</div>
+								<div className="Pokecard-data">Dummy</div>
+							</React.Fragment>
+						)}
 					</div>
 				</div>
 			</div>
