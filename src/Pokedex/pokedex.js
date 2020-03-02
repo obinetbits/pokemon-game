@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import './pokedex.css';
 import Pokecard from '../Pokecard/pokecard';
 
-const Pokedex = ({ pokemon }) => {
+const Pokedex = ({ pokemon, reset }) => {
 	const initialState = {
 		matchedCards: {},
 		currentUniqueId: '',
@@ -18,29 +18,40 @@ const Pokedex = ({ pokemon }) => {
 				const matchedCard = {
 					[cardStatus.currentName]: true
 				};
-				setCardStatus({
-					...cardStatus,
-					matchedCards: Object.assign(cardStatus.matchedCards, matchedCard)
-				});
+				setCardStatus((prevState) => ({
+					...prevState,
+					matchedCards: Object.assign(prevState.matchedCards, matchedCard)
+				}));
 			}
 		},
-		[ cardStatus ]
+		[ cardStatus.prevName, cardStatus.currentName, cardStatus.matchedCards ]
 	);
 
-	const onCardflipHandler = ({ uniqueId, name }) => {
-		setCardStatus({
-			...cardStatus,
+	const onCardflipHandler = useCallback(({ uniqueId, name }) => {
+		setCardStatus((prevState) => ({
+			...prevState,
 			currentUniqueId: uniqueId,
-			prevUniqueId: cardStatus.currentUniqueId,
+			prevUniqueId: prevState.currentUniqueId,
 			currentName: name,
-			prevName: cardStatus.currentName
-		});
-	};
+			prevName: prevState.currentName
+		}));
+	}, []);
+
+	const handleReset = useCallback(
+		() => {
+			setCardStatus(initialState);
+			reset();
+		},
+		[ reset, initialState ]
+	);
 
 	return (
 		<div>
 			<h1 className="Pokedex-winner">Pokemon</h1>
 			<p>Memory Game</p>
+			<button onClick={handleReset} className="Pokeball">
+				Reset
+			</button>
 			<div className="Pokedex-cards">
 				{pokemon.map((p) => (
 					<Pokecard

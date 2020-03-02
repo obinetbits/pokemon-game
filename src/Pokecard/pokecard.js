@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import './pokecard.css';
 
 // const POKE_API = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
@@ -18,10 +18,13 @@ const Pokecard = ({
 	exp,
 	type
 }) => {
-	const handleFlipCard = () => {
-		if (flipCardAction) return;
-		flipCard({ uniqueId: uniqueId, name: name });
-	};
+	const handleFlipCard = useCallback(
+		() => {
+			if (flipCardAction) return;
+			flipCard({ uniqueId, name });
+		},
+		[ flipCardAction, flipCard, uniqueId, name ]
+	);
 
 	const imgSrc = `${POKE_API}${padToThree(imageId)}.png`;
 	const stayOpen = isCurrentName && isPrevName;
