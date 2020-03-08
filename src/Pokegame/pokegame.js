@@ -27,7 +27,7 @@ const Pokegame = () => {
 		return a;
 	};
 
-	const number = 4;
+	const number = 5;
 
 	useEffect(
 		() => {

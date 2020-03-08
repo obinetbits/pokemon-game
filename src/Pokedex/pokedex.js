@@ -63,7 +63,7 @@ const Pokedex = ({ pokemon, reset }) => {
 						exp={p.base_experience}
 						matchedCards={cardStatus.matchedCards}
 						flipCard={onCardflipHandler}
-						flipCardAction={cardStatus.currentUniqueId === p.uniqueId}
+						wasJustClickedOn={cardStatus.currentUniqueId === p.uniqueId}
 						isCurrentName={cardStatus.currentName === p.name}
 						isPrevName={cardStatus.prevName === p.name}
 						isMatched={cardStatus.matchedCards[p.name]}

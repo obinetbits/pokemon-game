@@ -1,0 +1,389 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pokecard should always render with card open after being matched 1`] = `
+<div
+  className="flip-card flip-card-action"
+>
+  <div
+    className="flip-card-inner"
+  >
+    <div
+      className="Pokecard-front"
+      onClick={[Function]}
+    >
+      <h1
+        className="Pokecard-title"
+      >
+        Guess
+      </h1>
+      <div
+        className="Pokecard-image"
+      >
+        <h1>
+          Pokemon Card
+        </h1>
+      </div>
+      <div
+        className="Pokecard-data"
+      >
+        <span
+          aria-label="Monser"
+          role="img"
+        >
+          👾👾👾
+        </span>
+      </div>
+      <div
+        className="Pokecard-data"
+      >
+        <span
+          aria-label="Diamonds"
+          role="img"
+        >
+          ♦️♦️️♦️♦️
+        </span>
+      </div>
+    </div>
+    <div
+      className="Pokecard-back"
+    >
+      <h1
+        className="Pokecard-title"
+      >
+        name
+      </h1>
+      <div
+        className="Pokecard-image"
+      >
+        <img
+          alt="name"
+          onError={[Function]}
+          src="http://www.pokestadium.com/sprites/xy/name.gif"
+        />
+      </div>
+      <div
+        className="Pokecard-data"
+      >
+        Exp: 
+        unknown
+         
+      </div>
+      <div
+        className="Pokecard-data"
+      >
+        Type: 
+        unknown
+         
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Pokecard should render correctly in "debug" mode 1`] = `
+<div
+  className="flip-card"
+>
+  <div
+    className="flip-card-inner"
+  >
+    <div
+      className="Pokecard-front"
+      onClick={[Function]}
+    >
+      <h1
+        className="Pokecard-title"
+      >
+        Guess
+      </h1>
+      <div
+        className="Pokecard-image"
+      >
+        <h1>
+          Pokemon Card
+        </h1>
+      </div>
+      <div
+        className="Pokecard-data"
+      >
+        <span
+          aria-label="Monser"
+          role="img"
+        >
+          👾👾👾
+        </span>
+      </div>
+      <div
+        className="Pokecard-data"
+      >
+        <span
+          aria-label="Diamonds"
+          role="img"
+        >
+          ♦️♦️️♦️♦️
+        </span>
+      </div>
+    </div>
+    <div
+      className="Pokecard-back"
+    >
+      <h1
+        className="Pokecard-title"
+      >
+        Dummy
+      </h1>
+      <div
+        className="Pokecard-image"
+      >
+        <h1>
+          Pokemon Card
+        </h1>
+      </div>
+      <div
+        className="Pokecard-data"
+      >
+        Dummy
+      </div>
+      <div
+        className="Pokecard-data"
+      >
+        Dummy
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Pokecard should render with card closed on initialy 1`] = `
+<div
+  className="flip-card"
+>
+  <div
+    className="flip-card-inner"
+  >
+    <div
+      className="Pokecard-front"
+      onClick={[Function]}
+    >
+      <h1
+        className="Pokecard-title"
+      >
+        Guess
+      </h1>
+      <div
+        className="Pokecard-image"
+      >
+        <h1>
+          Pokemon Card
+        </h1>
+      </div>
+      <div
+        className="Pokecard-data"
+      >
+        <span
+          aria-label="Monser"
+          role="img"
+        >
+          👾👾👾
+        </span>
+      </div>
+      <div
+        className="Pokecard-data"
+      >
+        <span
+          aria-label="Diamonds"
+          role="img"
+        >
+          ♦️♦️️♦️♦️
+        </span>
+      </div>
+    </div>
+    <div
+      className="Pokecard-back"
+    >
+      <h1
+        className="Pokecard-title"
+      >
+        Dummy
+      </h1>
+      <div
+        className="Pokecard-image"
+      >
+        <h1>
+          Pokemon Card
+        </h1>
+      </div>
+      <div
+        className="Pokecard-data"
+      >
+        Dummy
+      </div>
+      <div
+        className="Pokecard-data"
+      >
+        Dummy
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Pokecard should render with card open when clicked on 1`] = `
+<div
+  className="flip-card flip-card-action"
+>
+  <div
+    className="flip-card-inner"
+  >
+    <div
+      className="Pokecard-front"
+      onClick={[Function]}
+    >
+      <h1
+        className="Pokecard-title"
+      >
+        Guess
+      </h1>
+      <div
+        className="Pokecard-image"
+      >
+        <h1>
+          Pokemon Card
+        </h1>
+      </div>
+      <div
+        className="Pokecard-data"
+      >
+        <span
+          aria-label="Monser"
+          role="img"
+        >
+          👾👾👾
+        </span>
+      </div>
+      <div
+        className="Pokecard-data"
+      >
+        <span
+          aria-label="Diamonds"
+          role="img"
+        >
+          ♦️♦️️♦️♦️
+        </span>
+      </div>
+    </div>
+    <div
+      className="Pokecard-back"
+    >
+      <h1
+        className="Pokecard-title"
+      >
+        name
+      </h1>
+      <div
+        className="Pokecard-image"
+      >
+        <img
+          alt="name"
+          onError={[Function]}
+          src="http://www.pokestadium.com/sprites/xy/name.gif"
+        />
+      </div>
+      <div
+        className="Pokecard-data"
+      >
+        Exp: 
+        unknown
+         
+      </div>
+      <div
+        className="Pokecard-data"
+      >
+        Type: 
+        unknown
+         
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Pokecard should render with card open when matching card has just been clicked on 1`] = `
+<div
+  className="flip-card flip-card-action"
+>
+  <div
+    className="flip-card-inner"
+  >
+    <div
+      className="Pokecard-front"
+      onClick={[Function]}
+    >
+      <h1
+        className="Pokecard-title"
+      >
+        Guess
+      </h1>
+      <div
+        className="Pokecard-image"
+      >
+        <h1>
+          Pokemon Card
+        </h1>
+      </div>
+      <div
+        className="Pokecard-data"
+      >
+        <span
+          aria-label="Monser"
+          role="img"
+        >
+          👾👾👾
+        </span>
+      </div>
+      <div
+        className="Pokecard-data"
+      >
+        <span
+          aria-label="Diamonds"
+          role="img"
+        >
+          ♦️♦️️♦️♦️
+        </span>
+      </div>
+    </div>
+    <div
+      className="Pokecard-back"
+    >
+      <h1
+        className="Pokecard-title"
+      >
+        name
+      </h1>
+      <div
+        className="Pokecard-image"
+      >
+        <img
+          alt="name"
+          onError={[Function]}
+          src="http://www.pokestadium.com/sprites/xy/name.gif"
+        />
+      </div>
+      <div
+        className="Pokecard-data"
+      >
+        Exp: 
+        unknown
+         
+      </div>
+      <div
+        className="Pokecard-data"
+      >
+        Type: 
+        unknown
+         
+      </div>
+    </div>
+  </div>
+</div>
+`;
