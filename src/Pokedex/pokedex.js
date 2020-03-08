@@ -8,7 +8,8 @@ const Pokedex = ({ pokemon, reset }) => {
 		currentUniqueId: '',
 		prevUniqueId: '',
 		currentName: '',
-		prevName: ''
+		prevName: '',
+		attempts: 0
 	};
 	const [ cardStatus, setCardStatus ] = useState(initialState);
 
@@ -33,7 +34,8 @@ const Pokedex = ({ pokemon, reset }) => {
 			currentUniqueId: uniqueId,
 			prevUniqueId: prevState.currentUniqueId,
 			currentName: name,
-			prevName: prevState.currentName
+			prevName: prevState.currentName,
+			attempts: prevState.attempts + 1
 		}));
 	}, []);
 
@@ -48,7 +50,7 @@ const Pokedex = ({ pokemon, reset }) => {
 	return (
 		<div>
 			<h1 className="Pokedex-winner">Pokemon</h1>
-			<p>Memory Game</p>
+			<p>Memory Game. Attempts: {cardStatus.attempts}</p>
 			<button onClick={handleReset} className="Pokeball">
 				Reset
 			</button>
